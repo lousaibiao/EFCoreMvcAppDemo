@@ -30,7 +30,7 @@ namespace WebApplication1
         {
             // Add framework services.
             services.AddMvc();
-            //
+            // Depedency Injection DbContext - TestContext
             services.AddDbContext<TestContext>(optionsAction => optionsAction.UseSqlServer(Configuration.GetConnectionString("TestConnection")));
         }
 
